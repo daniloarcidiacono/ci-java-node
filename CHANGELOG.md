@@ -1,3 +1,12 @@
+# Version 0.1.2 (2018-11-18)
+
+
+### Bug Fixes
+
+* **ci:** remove branch build. ([7c6fee7](https://github.com/daniloarcidiacono/ci-java-node/commit/7c6fee7))
+
+
+
 # Version 0.1.1 (2018-11-18)
 
 
