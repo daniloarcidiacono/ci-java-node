@@ -1,0 +1,39 @@
+version: 2
+jobs:
+  build:
+    working_directory: /ci-java-node
+    docker:
+      - image: docker:17.05.0-ce-git
+
+    steps:
+      - checkout
+      - setup_remote_docker
+
+      - run:
+          name: Extract tag
+          command: export TAG=$(git describe --abbrev=0 --tags)
+
+      - run:
+          name: Build docker images
+          command: |
+            docker build -t ci-java-node .
+            docker tag ci-java-node $DOCKER_HUB_USER_ID/ci-java-node:$TAG
+            docker tag ci-java-node $DOCKER_HUB_USER_ID/ci-java-node:latest
+
+      - deploy:
+          name: Publish application to docker hub
+          command: |
+            docker login -e $DOCKER_HUB_EMAIL -u $DOCKER_HUB_USER_ID -p $DOCKER_HUB_PWD
+            docker push $DOCKER_HUB_USER_ID/ci-java-node:$TAG
+            docker push $DOCKER_HUB_USER_ID/ci-java-node:latest
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              only: master
