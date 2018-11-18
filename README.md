@@ -7,6 +7,7 @@ Alpine Linux 3.8 with some preinstalled tools suitable for CI/CD platforms.
 * **Git**: 2.18.1-r0
 * **Maven**: 3.5.4-r1
 * **GnuPG**: 2.2.8-r0
+* **[hub](https://hub.github.com/)**: 2.6.0 
 
 Please note that versions come from [Alpine 3.8 package ecosystem](https://pkgs.alpinelinux.org/packages?branch=v3.8).
 
