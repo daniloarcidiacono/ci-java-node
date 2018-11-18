@@ -8,6 +8,18 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
+      - run:
+          name: Build docker images
+          command: |
+            docker build -t ci-java-node:0.0.1 .
+            docker tag ci-java-node $DOCKER_HUB_USER_ID/ci-java-node:latest
+
+      - deploy:
+          name: Publish application to docker hub
+          command: |
+            docker login -e $DOCKER_HUB_EMAIL -u $DOCKER_HUB_USER_ID -p $DOCKER_HUB_PWD
+            docker push $DOCKER_HUB_USER_ID/ci-java-node:0.0.1
+            docker push $DOCKER_HUB_USER_ID/ci-java-node:latest
 
 #      - restore_cache:
 #          keys:
