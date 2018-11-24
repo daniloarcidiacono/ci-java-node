@@ -8,6 +8,7 @@ Alpine Linux 3.8 with some preinstalled tools suitable for CI/CD platforms.
 * **Maven**: 3.5.4-r1
 * **openssl-dev**: 1.0.2q-r0 (needed by nodegit)
 * **g++**: 6.4.0-r9 (needed by nodegit)
+* **openssh**: 7.7_p1-r3
 * **GnuPG**: 2.2.8-r0
 * **[hub](https://hub.github.com/)**: 2.6.0
 
