@@ -1,3 +1,17 @@
+#  (2018-11-24)
+
+
+### Bug Fixes
+
+* **ci:** disable branch builds ([4604656](https://github.com/daniloarcidiacono/ci-java-node/commit/4604656))
+
+
+### Features
+
+* add openssl-dev and g++ packages ([04df23e](https://github.com/daniloarcidiacono/ci-java-node/commit/04df23e))
+
+
+
 # Version 0.1.2 (2018-11-18)
 
 
