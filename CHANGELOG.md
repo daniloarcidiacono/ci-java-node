@@ -1,3 +1,12 @@
+# Version 0.4.0 (2018-11-24)
+
+
+### Features
+
+* add zip package ([a6fd982](https://github.com/daniloarcidiacono/ci-java-node/commit/a6fd982))
+
+
+
 # Version 0.3.0 (2018-11-24)
 
 
