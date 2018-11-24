@@ -1,4 +1,13 @@
-#  (2018-11-24)
+# Version 0.3.0 (2018-11-24)
+
+
+### Features
+
+* add openssh package ([d22bf25](https://github.com/daniloarcidiacono/ci-java-node/commit/d22bf25))
+
+
+
+# Version 0.2.0 (2018-11-24)
 
 
 ### Bug Fixes
